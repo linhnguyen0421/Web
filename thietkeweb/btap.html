@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+        .header1 {
+            background-color: #e2a9a9;
+            display: flex;
+        }
+        h1{
+            font-size: 40px;
+            color: #863b3b;
+            text-align: left;
+        }
+        .div1{
+            padding-left: 50px;
+            flex-direction: column;
+        }
+        .tieude {
+            color: #863b3b;
+            flex-direction: column;
+        }
+        nav ul{
+            padding: 10px;
+            margin-top: 0;
+            margin-bottom: 0;
+            background-color: #ed9f9f;
+            list-style-type: none;
+            justify-content: space-around;
+            display: flex;
+            height: 30px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            display:block;
+        }
+        nav ul li a:hover{background:#863b3b; color: #333;}
+	    nav ul li > .menucon{display: none; position: absolute;}
+	    nav ul li:hover .menucon{display: block;}
+        img {
+            height: 600px;
+            width: 100%;
+        }
+        .cntt{
+            color: #863b3b;
+            display: flex;
+            text-align: center;
+            text-decoration: none;
+
+        }
+        .anhmin{
+            --justify-content: space-around;
+            --text-align: center;
+            margin-left: 20px;
+        --flex-basis: 30%;
+        }
+        .anh{
+            height: 100px;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header1">
+        <h1>HSC</h1>
+        <div class="div1">
+        <h2 class="tieude"><b>CÔNG TY TNHH CÔNG NGHỆ HSC</b></h2>
+        <h2 class="tieude">Tel:0456839668-Fax-0466805132</h2>
+    </div>
+</div>
+    <nav>
+        <ul>
+            <li><a href="">Trang chủ</a></li>
+            <li><a href="">Giới thiệu</a></li>
+            <li><a href="">Sản phẩm</a>
+                <ul class="menucon">
+                    <li><a href="">Máy tính văn phòng</a></li>
+                    <li><a href="">Máy chủ</a></li>
+                    <li><a href="">Laptop</a></li>
+                    <li><a href="">Màn hình máy tính</a></li>
+                    <li><a href="">Máy in</a></li>
+                </ul>
+            </li>
+            <li><a href="">Dự án</a></li>
+            <li><a href="">Tuyển dụng</a></li>
+            <li><a href="">Liên hệ</a></li>
+            <li>
+                <input type="text"></input>
+            </li>
+            <li><input type="button" value="Tìm kiếm"></li>
+        </nav>
+        <img src="anh.JPG"  alt="ảnh nền"/>
+ <div class="cntt">
+    <div class="anhmin">
+    <h3 class="mt">CÔNG NGHỆ THÔNG TIN</h3>
+    <img class="anh" src="anh.JPG"
+ alt="ảnh nền"/>
+</div>
+<div class="anhmin">
+    <h3 class="mt">THIẾT BỊ Y TẾ</h3>
+    <img class="anh" src="anh.JPG" alt="ảnh nền"/>
+</div>
+<div class="anhmin">
+    <h3 class="mt">CƠ ĐIỆN</h3>
+    <img class="anh" src="anh.JPG" alt="ảnh nền"/>
+</div>
+    </div>
+    </body>
+</html>

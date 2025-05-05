@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        border-collapse: collapse;
+    }
+</style>
+<body>
+    <form>
+        <table border="1">
+            <tr>
+                <td>Nhap chuoi: </td>
+                <td><input type="text" id="a"></td>
+            </tr>
+            <tr>
+                <td>So tu co 4 ky tu:</td>
+                <td><input type="text" id="b"></td>
+            </tr>
+            <tr align="center">
+                <td colspan="2"><input type="button" value="Tim" onclick="countWords()">
+                <input type="reset" value="Huy bo"></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function countWords() {
+            // Lấy chuỗi nhập vào
+            const inputString = document.getElementById("a").value;
+
+            // Tách chuỗi thành các từ
+            const words = inputString.split(" ");
+
+            // Đếm số từ có 4 ký tự và bắt đầu bằng "m"
+            let count = 0;
+            for (const word of words) {
+                if (word.length == 4 && word.toLowerCase().startsWith("m")) {
+                    count++;
+                }
+            }
+
+            // Hiển thị kết quả
+            document.getElementById("b").value= count;
+        }
+    </script>
+</body>
+</html>

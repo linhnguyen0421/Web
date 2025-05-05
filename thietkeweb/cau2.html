@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 2</title>
+</head>
+<body>
+    <form action="">
+        <table align="center" style="width: 400px;">
+            <tr>
+                <td><b>Nhập chuỗi: </b></td>
+                <td> 
+                    <input type="text" name="nc" id="nc">
+                </td>
+            </tr>
+            <tr>
+                <td><b>Số từ có 4 kí tự: </b></td>
+                <td> 
+                    <input type="text" name="st" id="st">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="Tìm" onclick="Cacl()">
+                    <input type="reset" value="Hủy bỏ">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+<script>
+     function calc() {
+            let input = document.getElementById('nc').value;
+    
+            if (input.length > 225) {
+                alert("Chuỗi quá 225 ký tự");
+                return;
+            }
+            let count = 0;
+            let array = input.split(' ');
+            for (var i = 0; i < array.length; i++) {
+             if (array[i].length === 4) {
+               count++;
+             }
+            }
+            document.getElementById('st').value = count++;
+        }
+</script>

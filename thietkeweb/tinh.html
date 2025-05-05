@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function tinh(){
+        var a=parseInt(document.getElementById('a').value);
+        var b=parseInt(document.getElementById('b').value);
+        var kq=a+b;
+        document.getElementById("kq").value=kq;
+        document.getElementById('kq').style.fontSize="120px";
+    }
+</script>
+<body>
+    <form>
+        <p>so1:<input type="text" id="a"></p>
+        <p>so2:<input type="text" id="b"></p>
+        <p>kq:<input type="text" id="kq"></p>
+        <input type="button" value="tinh" onclick="tinh()"><input type="reset" value="xoa">
+    </form>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuẩn hóa Họ và Tên</title>
+    
+</head>
+<body>
+    <h1>Nhập Họ và Tên</h1>
+    <form>
+        <label for="fullName">Họ và tên:</label>
+        <input type="text" id="fullName" placeholder="Nhập Họ và Tên">
+        <br>
+        <label for="lastName">Tên:</label>
+        <input type="text" id="lastName" readonly>
+        <br><br>
+        <button type="button" onclick="standardizeAndDisplay()">Hiển thị</button>
+        <button type="reset">Hủy bỏ</button>
+    </form>
+
+    <script>
+        function standardizeAndDisplay() {
+            // Lấy giá trị Họ và Tên từ ô nhập liệu
+            const fullName = document.getElementById("fullName").value;
+
+            // Chuẩn hóa chuỗi Họ và Tên
+            const standardizedFullName = standardizeString(fullName);
+
+            // Tách tên từ Họ và Tên đã chuẩn hóa
+            const lastName = getLastName(standardizedFullName);
+
+            // Hiển thị kết quả
+            document.getElementById("fullName").value = standardizedFullName;
+            document.getElementById("lastName").value = lastName;
+        }
+
+        // Hàm chuẩn hóa chuỗi
+        function standardizeString(str) {
+            // Loại bỏ khoảng trắng thừa ở đầu và cuối
+            str = str.trim();
+
+            // Thay thế nhiều khoảng trắng liên tiếp bằng một khoảng trắng
+            str = str.replace(/\s+/g, ' ');
+
+            // Chuyển đổi chuỗi thành chữ thường
+            str = str.toLowerCase();
+
+            return str;
+        }
+
+        // Hàm lấy tên từ Họ và Tên
+        function getLastName(fullName) {
+            // Tách chuỗi thành mảng các từ
+            const words = fullName.split(" ");
+
+            // Lấy từ cuối cùng trong mảng (tên)
+            const lastName = words[words.length - 1];
+
+            return lastName;
+        }
+    </script>
+</body>
+</html>

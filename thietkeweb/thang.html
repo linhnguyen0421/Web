@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đếm số ngày trong tháng</title>
+</head>
+<body>
+    <h1>Đếm số ngày trong tháng</h1>
+    <form>
+        <table border="1">
+            <tr>
+                <td><label for="month">Nhập tháng (1-12):</label></td>
+                <td><input type="number" id="month"></td>
+            </tr>
+            <tr>
+                <td>Số ngày trong tháng:</td>
+                <td><span id="result" >0</span></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"> 
+                    <input type="button" onclick="countDays()" value="Xem số ngày"></input>
+                    <input type="reset" value="xoa" onclick="resetResult()">
+                </td>
+            </tr>
+        </table>
+        
+    </form>
+
+    <script>
+        function countDays() {
+    var month = parseInt(document.getElementById('month').value);
+
+    if (month < 1 || month > 12) {
+        alert("Tháng không hợp lệ! Vui lòng nhập tháng từ 1 đến 12.");
+        return;
+    }
+
+    var daysInMonth;
+    
+    if (month === 2) {
+        daysInMonth = "28 hoặc 29 ngày (tùy năm nhuận)";
+    } else if (month === 4 || month === 6 || month === 9 || month === 11) {
+        daysInMonth = "30 ngày";
+    } else {
+        daysInMonth = "31 ngày";
+    }
+
+    document.getElementById('result').textContent = daysInMonth;
+}
+
+        function resetResult() {
+            document.getElementById('result').textContent = "0";
+}
+
+    </script>
+</body>
+</html>

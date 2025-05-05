@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sắp xếp từ theo Alphabet</title>
+</head>
+<body>
+
+<div class="container">
+    <h3>SẮP CÂU THEO QUY LUẬT</h3>
+    <label for="inputText">Nhập câu ban đầu:</label>
+    <input type="text" id="inputText" placeholder="Nhập câu...">
+    <br><br>
+    <label for="sortedText">Câu sau khi sắp lại:</label>
+    <input type="text" id="sortedText" readonly>
+    <br><br>
+    <button onclick="sortWords()">Viết lại</button>
+    <button onclick="resetForm()">Xóa</button>
+</div>
+
+<script>
+    function sortWords() {
+        let input = document.getElementById("inputText").value.trim();
+
+        if (input === "") {
+            alert("Vui lòng nhập câu hợp lệ!");
+            return;
+        }
+
+        let words = input.split(/\s+/); // Tách từ dựa trên khoảng trắng
+
+        if (words.length > 20) {
+            alert("Câu không được vượt quá 20 từ!");
+            return;
+        }
+
+        for (let word of words) {
+            if (word.length > 10) {
+                alert("Mỗi từ không được quá 10 ký tự!");
+                return;
+            }
+        }
+
+        words.sort(); // Sắp xếp theo thứ tự Alphabet
+
+        document.getElementById("sortedText").value = words.join(" ");
+    }
+
+    function resetForm() {
+        document.getElementById("inputText").value = "";
+        document.getElementById("sortedText").value = "";
+    }
+</script>
+
+</body>
+</html>

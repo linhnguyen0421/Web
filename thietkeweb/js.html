@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+    <p>1.Kiểm tra trong chuỗi có xuất hiện chữ Cường hay không?</p>
+    <style>
+        p{font-weight: bold;
+        color: red;}
+</style>
+<script>
+var patt = /Cường/;
+if (patt.test("Tác giả Cường")) {
+    document.write('Trong chuỗi có chữ Cường');
+}
+else {
+    document.write('Trong chuỗi không có chữ Cường');
+}
+</script>
+<br>
+<p>2.Kiểm tra chuỗi có ít nhất một chữ n</p>
+<script>
+if (/n+/.test("hello")) {
+document.write('Trong chuỗi có chữ n');
+}
+else {
+    document.write('Trong chuỗi không có chữ n');
+}
+    </script>
+    <br>
+    <p>3.Kiểm tra trong chuỗi có xuất hiện ký tự số hay không</p>
+    <script>
+    if (/[0-9]/.test("hello123")) {
+    document.write('Trong chuỗi có xuất hiện số');
+}
+else {
+    document.write('Trong chuỗi không xuất hiện số');
+}
+</script>
+<br>
+<p>4.Kiểm tra trong chuỗi không hoặc có xuất hiện số</p>
+<script>
+if (/[0-9]*/.test("freetuts")) {
+document.write('Luôn luôn chạy');
+}
+else {
+document.write('Không bao giờ chạy');
+}
+</script>
+<br>
+<p>5.Kiểm tra trong chuỗi có chữ H hay không</p>
+<script>
+
+if (/H/.test("hello")) {
+document.write('Có chữ H');
+}
+else {
+document.write('Không có chữ H');
+}
+</script>
+<br>
+<p>6.Kiểm tra trong chuỗi có chữ H hay không</p>
+<script>
+if (/H/i.test("hello")) {
+document.write('Có chữ H');
+}
+else {
+document.write('Không có chữ H');
+}
+</script>
+<br>
+<p>7.Kiểm tra chuỗi xuất hiện ít nhất 10 chữ N liên tiếp và không phân biệt chữ hoa chữ thường</p>
+<script>
+var pattern = /n{10,}/i;
+if (pattern.test("10 chu n la nnnnnnnnnn")) {
+document.write('Chuỗi có NHIỀU hơn 10 chữ n');
+}
+else {
+document.write('Chuỗi có ÍT hơn 10 chữ n');
+}
+</script>
+<br>
+<p>8.Kiểm tra chuỗi có phải là 'freetuts.net' hay không</p>
+<script>
+var pattern = /^freetuts\.net$/i;
+if (pattern.test("freetuts.net")) {
+document.write('Chuỗi freetuts.net');
+}
+else {
+document.write('Không phải chuỗi freetuts.net');
+}
+</script>
+<br>
+<p>9.Kiểm tra chuỗi là các chữ số và dài 8 ký tự</p>
+<script>
+var pattern = /^[0-9]{8}$/;
+if (pattern.test("12345678")) {
+document.write('Các số dài 8 ký tự');
+}
+else {
+document.write('Không phải là số hoặc ngắn hơn 8 ký tự');
+}
+</script>
+<br>
+<p>10.Kiểm tra chuỗi định dạng mã thẻ cào xxxx-xxxx-xxxx-xxxx và x chính là các chữ số</p>
+<script>
+var pattern = /^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$/;
+if (pattern.test("1234-1232-1321-2312")) {
+document.write('Mã thẻ hợp lệ');
+}
+else {
+document.write('Mã thẻ không hợp lệ');
+}
+</script>
+<br>
+<p>11.Lấy tất cả các chữ số trong chuỗi "số điện thoại 0979306603".</p>
+<script>
+let string = "số điện thoại 0979306603";
+var result = string.match(/[0-9]+/img);
+console.log(result); // ["0979306603"]
+        document.write(result);
+// Thử đổi chuỗi string sang giá trị khác
+string = "tôi sinh năm 90, vơi tôi sinh năm 92";
+result = string.match(/[0-9]+/img);
+console.log(result);  // ["90", "92"]
+    </script>
+    <br>
+    <p>12.Nếu không tìm thấy thì sẽ trả về giá trị null.</p>
+    <script>
+    string = "tôi đang học regular expression";
+    result = string.match(/[0-9]+/img);
+    console.log(result);  // null
+    document.write(result);
+</script>
+<body>
+</body>
+</html>

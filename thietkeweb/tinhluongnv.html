@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tinh luong</title>
+</head>
+<style>
+    table{
+        margin: 0px;
+    }
+</style>
+<body>
+    <form name="nhap">
+    <table border="1">
+        <tr>
+            <td colspan="2"> <h2>TÍNH LƯƠNG NHÂN VIÊN</h2></td>
+        </tr>
+        <tr>
+            <td>Tên nhân viên</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>So thang lam viec</td>
+            <td><input type="text" name="a" oninput="myFunction(),myFunction1()"></td>
+        </tr>
+        <tr>
+            <td>He so luong</td>
+            <td><input type="text" name="b"></td>
+        </tr>
+        <tr>
+
+            <td>Luong co ban</td>
+            <td><input type="text" name="c"></td>
+        </tr>
+        <tr>
+            <td>Luong thang</td>
+            <td><input type="text" name="d"></td>
+        </tr>
+        <tr>
+            <td>Thue thu nhap</td>
+            <td><input type="text" name="e"></td>
+        </tr>
+        <tr>
+            <td>Thuc linh</td>
+            <td><input type="text" name="f"></td>
+        </tr>
+
+        <tr>
+        <td colspan="2" align="center">    
+            <input type="button" value="Tính Tiền" onclick="myFunction2()">
+            <input type="reset" value="Xóa">
+            
+        </td>
+        </tr>
+    </table>
+</form>
+</body>
+<script>
+    function myFunction(){
+        var thang = parseInt(window.document.nhap.a.value);
+        var heso;
+        if (thang < 12){
+            heso = 1.92;
+        }
+        else if (thang >= 12 && thang < 36){
+            heso = 2.34;
+        }
+        else if (thang >=36 && thang < 60){
+            heso = 3;
+        }
+        else{
+            heso = 4.5;
+        }
+        document.nhap.b.value = heso;
+        document.nhap.c.value = 650000;
+
+
+    }
+    function myFunction1(){
+        var heso = parseInt(window.document.nhap.b.value);
+        var luongcoban = parseInt(window.document.nhap.c.value);
+        var luongthang = heso * luongcoban;
+        document.nhap.d.value = luongthang;
+        
+        var luongt =  parseInt(window.document.nhap.d.value);
+        var thue;
+        if (luongt > 15000000){
+            thue = luongt*0.3;
+        }
+        else if (luongt >= 7000000 && luongt < 15000000){
+            thue = luongt*0.2;
+        }
+        else {
+            thue = luongt * 0.1;
+        }
+        document.nhap.e.value = thue;
+    }
+
+    function myFunction2(){
+        var luongt =  parseInt(window.document.nhap.d.value);
+        var thue = parseInt(window.document.nhap.e.value);
+        var thuclinh = luongt-thue;
+        document.nhap.f.value = thuclinh;
+    }
+    
+</script>
+</html>

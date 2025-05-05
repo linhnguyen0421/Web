@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempi</title>
+    <style>
+        body{
+            background-image: linear-gradient(to right, #BF9DCD , #E1B79F);
+        }
+        .header1{
+            height: 100px;
+            width: 1440px;
+            background-color: aliceblue;
+            --margin-top: 0;
+            display: flex;
+        }
+        .tieude{
+            font-size: 50px;
+            margin-left:90px;
+        }
+        .menu{
+            width: 1133px;
+            height: 100px;
+        }
+        .menu ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+        } 
+        .menu ul li {
+            
+            margin-top: 20px;
+        }
+        .menu ul li a{
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            color: black;
+        }
+        .menu ul li a:hover{color: #333;}
+	    .menu ul li > .menucon{display: none; position: absolute;}
+	    .menu ul li:hover .menucon{display: block;}
+
+        .center{
+            font-size: 100px;
+        }
+        .content{
+          text-align: center;
+        }
+        .ngang2 ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+        }
+        .content2{
+            text-align: center;
+        }
+        .div3{
+            display: flex;
+            text-align: center;
+            text-decoration: none;
+            justify-content: space-around;
+        }
+        .flexitem{
+            background-color: #e4a6a6;
+            --justify-content: space-around;
+        }
+        
+        </style>
+</head>
+<body>
+    <div class="header1">
+    <h1 class="tieude">Temp<span style="color: blueviolet">i</span></h1>
+    <nav class="menu">
+        <ul>
+            <li><a href="#">Tài nguyên</a>
+            <ul class="menucon">
+                <li><a href="#">Có gì mới</a></li>
+                <li><a href="#">Hướng dẫn</a></li>
+                <li><a href="#">Mẹo dùng tempi</a></li>
+            </li>
+            </ul>
+            <li><a href="#">Mẫu Website</a></li>
+            <li><a href="#">Mẫu Landing Page</a></li>
+            <li><a href="#">Bảng giá</a></li>
+            <li><input type="text"></input></li>
+            <li><input type="button" value="tìm kiếm"></li>
+    </ul>
+</nav>
+</div>
+
+    <div class="content">
+        <h1 class="center">Temp<span style="color: blueviolet">i</span></h1>
+        <h2>Nền tảng xây dựng</h2>
+        <h2>Website & Landing Page chuyên nghiệp</h2>
+        <nav class="ngang2">
+            <ul> <li class="ngang2_1">Tư vấn</li>
+                <li class="ngang2_1">Sử dụng miễn phí ngay</li>
+            </ul>
+        </nav>
+    </div>
+    <h1 class="content2">Xuất bản chỉ trong vài phút</h1>
+    <div class="div3">
+        <div class="flexitem">
+            <h2>Lựa chọn tên miền ngoài</h2>
+            <p>Sử dụng tên miền riêng của bản để xuất bản website</p>
+        </div>
+        <div class="flexitem">
+            <h2>Sử dụng tên miền miễn phí</h2>
+            <p>Lựa chọn tên miền miễn phí có sẵn từ Tempi</p>
+        </div>
+        <div class="flexitem">
+            <h2>Xuất file HTML</h2>
+            <p>Xuất trang thành dạng HTML & CSS</p>
+        </div>
+    </div>
+</body>
+</html>

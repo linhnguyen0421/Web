@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            height: 100px;
+            background-color: blue;
+            color: white;
+            display: flex;
+        }
+        h1{
+            font-size: 50px;
+            padding-top: 20px;
+            padding-right: 100px;
+        }
+        #dau{
+            padding-top:20px ;
+        }
+        nav>ul{
+            list-style-type:none ;/*loai bo cham tron */
+            width: 100%;
+            height: 30px;
+            display: flex;
+            background-color: aqua;
+        }
+        nav ul li a{
+            text-decoration: none;/*bo gach chan*/
+            color:white ;
+            line-height: 30px;
+            width: 200px;
+            text-align: center;
+            display: inline-block;
+        }
+        .cha{
+            position: relative;
+        }
+        .con{
+            position: absolute;
+            width: 250px;
+            background-color: aqua;
+            z-index: 100;
+            list-style-type: none;
+            display: none;
+        }
+        .cha>ul>li>a{
+            width: 250px;
+            text-align: left;
+
+        }
+        .cha:hover .con{
+            display: block;
+        }
+        a:hover{
+            background-color: blue;
+        }
+        button{
+            padding-left: 20px;
+        }
+        input{
+            margin-left:  20px;
+        }
+        .anh{
+            width: 200px;
+            height: 140px;
+        }
+        #conten{
+            display: flex;
+        }
+        .anhbe{
+            padding: 0px 140px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <h1>HSC</h1>
+    <div id="dau"><h2>CONG TY TNHH CONG NGHE HSC</h2>
+    <h3>Tel: 0456839668 - Fax: 0466805132</h3></div></header>
+    <nav>
+        <ul>
+            <li><a href="#">Trang chu</a></li>
+            <li><a href="#">Gioi thieu</a></li>
+            <li class="cha"><a href="#">San pham</a>
+            <ul class="con">
+                <li><a href="#">Trang chu</a></li>
+                <li><a href="#">Gioi thieu</a></li>
+                <li><a href="#">San pham</a>
+            </ul>
+            </li>
+            <li><a href="#">Tuyen dung</a></li>
+            <li><a href="#">Lien he</a></li>
+            <li><input type="text" ></input></li>
+            <li><input type="submit"  value="tim kiem"></input></li>
+        </ul>
+    </nav>
+    <content>
+        <img src="anh.JPG" style="width: 100%;height: 600px;">
+        <div id="conten">
+        <div class="anhbe"><h3>Cong nghe thong tin</h3>
+            <img src="anh.JPG" class="anh"></div>
+        <div class="anhbe"><h3>Thiet bi y te</h3>
+            <img src="anh.JPG" class="anh"></div>
+        <div class="anhbe"><h3>Ki thuat</h3>
+            <img src="anh.JPG" class="anh"></div>
+        </div>
+    </content>
+    <footer style="height:30px;background-color: blue;text-align: center;">
+        <p>tao boi htc</p>
+    </footer>
+</body>
+</html>

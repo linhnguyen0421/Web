@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haui</title>
+    <style>
+        header{
+            height: 120px;
+            background-color: bisque;  
+            display: flex;
+        }
+        .logo{
+            height: 120px;
+            width: 120px;
+            
+        }
+        .tieude{
+            flex-direction: column;
+            text-align: center;
+            margin-left: 200px;
+            margin-top: 20px;
+        }
+        h1{
+            flex-direction: column;
+            text-align: center;
+        }
+        *{
+		margin:0px;
+		padding:0px;
+		box-sizing:border-box;
+	}
+	nav>ul{
+		list-style-type:none;
+		display:flex;
+		justify-content:space-around;
+		width:100%;
+		height:30px;
+		background-color:blue;
+	}
+	nav ul li a{
+		text-decoration:none;
+		color:white;
+		line-height:30px;
+		width:150px;
+		text-align:center;
+		display:inline-block;
+	}
+	nav ul li a:hover{
+		background-color:red;
+	}
+	.cha{
+		position:relative;
+	}
+	.con{
+		position:absolute;
+		width:250px;
+		z-index:100;
+		background-color:blue;
+		list-style-type:none;
+		display:none;
+	}
+	.cha>ul>li>a{
+		width:250px;
+		text-align:left;
+		padding-left:5px;
+
+	}
+	.cha:hover .con{
+		display:block;
+	}
+	
+    .anhcontent{
+        height: 100px;
+        width: 100px;
+    }
+    content{
+        display: flex;
+        text-align: center;
+            text-decoration: none;
+
+    }
+    .content1{
+        margin-left: 50px;
+    }
+    table {
+        flex-direction: column;
+    }
+    .cn2{
+        flex-direction: row;
+        display: flex;
+        width: 500px;
+        margin-left: 150px;
+        margin-top: 30px;
+        text-align: left;
+    }
+    table{
+        width: 200px;
+        text-align: right;
+        margin-right: 50px;
+        margin-left: 100px;
+        margin-top: 20px;
+    }
+    footer{
+        height: 30px;
+        background-color: bisque;
+        }
+    .footer1{
+        text-align: center;
+        margin-top: 10px;
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="haui.jpg" alt="haui"/>
+        <div class="tieude">
+        <h1>TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP HÀ NỘI</h1>
+        <h1>KHOA CÔNG NGHỆ THÔNG TIN</h1>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="">Kinh tế</a></li>
+            <li class="cha"><a href="">Văn hóa xã hội</a>
+                <ul class="con">
+                    <li><a href="">Kinh tế 1</a></li>
+                    <li><a href="">Kinh tế 2</a></li>
+                    <li><a href="">Kinh tế 3</a></li>
+                </ul>
+            </li>
+            <li><a href="">Giáo dục cộng</a></li>
+            <li><a href="">Học nữa học</a></li>
+            <li><a href="">Vừa học vừa</a></li>
+        </nav>
+
+    <content>
+    <div class="content1">
+        <h2><b>Tủ sách</b></h2>
+        <ul>
+            <li>Kinh tế</li>
+            <li>Văn hóa xã hội</li>
+            <li>Kinh tế 1</li>
+            <li>Kinh tế 2</li>
+            <li>Kinh tế 3</li>
+            <li>Giáo dục công</li>
+            <li>Học nữa học</li>
+            <li>Vừa học vừa</li>
+    </ul>
+    </div>
+
+    <div class="content1">
+        <div class="cn2">
+            <img class="anhcontent" src="haui.jpg" />
+            <div class="ngang">
+            <h4><b>Mẫu Tin Một</b></h4>
+            <p>Thủ khoa đầu ra trường ĐH Dược Hà Nội Trịnh Thị Vân Anh 
+                không chỉ học giỏi mà còn hăng say tham gia các hoạt động 
+                có ý nghĩa cho xã hội
+            </p>
+            </div>
+            </div>
+
+            <div class="cn2">
+                <img class="anhcontent" src="haui.jpg" />
+                <div class="ngang">
+                <h4><b>Mẫu Tin Một</b></h4>
+                <p>Thủ khoa đầu ra trường ĐH Dược Hà Nội Trịnh Thị Vân Anh 
+                    không chỉ học giỏi mà còn hăng say tham gia các hoạt động 
+                    có ý nghĩa cho xã hội
+                </p>
+            </div>
+                </div>
+        <div class="cn2">
+            <img class="anhcontent" src="haui.jpg" />
+            <div class="ngang">
+            <h4><b>Mẫu Tin Một</b></h4>
+            <p>Thủ khoa đầu ra trường ĐH Dược Hà Nội Trịnh Thị Vân Anh 
+                không chỉ học giỏi mà còn hăng say tham gia các hoạt động 
+                có ý nghĩa cho xã hội</p>
+            </div>
+        </div>
+    </div>
+    <div class="content1">
+        <p><ins>Đăng kí |Đăng nhập</ins></p>
+        <table border="1">
+            <tr>
+                <td style="background-color:gray;text-align: left;">Giờ hàng</td>
+            </tr>
+            <tr>
+                <td><p style="text-align: left;">Tổng cộng:OVNĐ
+                        Xem giỏ hàng
+                        Thanh toán </p>
+                </td>
+            </tr>
+        </table>
+        <table border="1">
+            <tr>
+                <td style="text-align: left;">Hỗ trợ trực tuyến</td>
+            </tr>
+            <tr>
+                <td style="background-color: gray;text-align: left;">Admin Web</td>
+            </tr>
+        </table>
+        <table border="1">
+            <tr>
+                <td style="background-color: gray;text-align: left;">Tin mới</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">Máy in Epson T60 nhảy 2 đèn đỏ</td>
+                <tr><td style="text-align: left;">Khi dùng máy in phun Epson dùng hệ thống mực ngoài ,đôi lúc bạn gặp một vài sự cố nhỏ</td></tr>
+                <tr><td style="text-align: left;">Sửa lỗi máy in Épon T60,T50 không nhận mực</td></tr>
+            </tr>
+        </table>
+    </div>
+    </content>
+    <footer>
+        <h4 class="footer1">Bản quyền khoa CNTT</h4>
+    </footer>
+</body>
+</html>

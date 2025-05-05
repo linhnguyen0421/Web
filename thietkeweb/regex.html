@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h2{
+            line-height: 50px;
+        }
+        .A{
+            font-weight: bold;
+            line-height: 40px;
+        }
+        #container{
+            /* padding-left: 500px; */
+            padding-top: 150px;
+        }
+        .input-small{
+            background: transparent;
+            border: 0;
+            outline: 0;
+        }
+        .form-dangnhap{
+            width: 500px;
+            height: 500px;
+        }
+        .form-group{
+            padding-left: 70px;
+        }
+        .txt-red{
+            color: red;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="form-dangnhap">
+        <h2 style="text-align: center;">Đăng kí tài khoản</h2>
+        <form action="">
+            <div class="form-group">
+                <label for="ten" class="A">Họ tên: <span class="txt-red">(*)</span><span class="txt-red" id="error_name"></span></label> <br>
+                <input type="text" name="ten" id="ten" placeholder="Nhập đầy đủ họ tên" class="input-small" size="48px" onblur="myFunction()">
+                <hr style="width: 350px; color:#f5f1ef">
+            </div>
+            <div class="form-group">
+                <label for="dt" class="A">Số điện thoại:<span class="txt-red">(*)</span><span class="txt-red" id="error_phone"></span></label><br>
+                <input type="text" name="dt" id="dt" placeholder="038-562-8952" class="input-small" size="48px" onblur="myFunction1()">
+                <hr style="width: 350px; color:#f5f1ef">
+            </div>
+            <div class="form-group">
+                <label for="tk" class="A">Email/Tài khoản:<span class="txt-red">(*)</span><span class="txt-red" id="error_email"></span></label><br>
+                <!-- <input type="text" name="tk" id="tk" placeholder="abc@gmail.com"> -->
+                <input type="email" name="tk" id="tk" class="input-small" size="48px" onblur="myFunction2()">
+                <hr style="width: 350px; color:#f5f1ef">
+            </div>
+            <div class="form-group">
+                <label for="mk" class="A">Mật khẩu:<span class="txt-red">(*)</span><span class="txt-red" id="error_pass"></span></label><br>
+                <input type="password" name="mk" id="mk" class="input-small"size="48px" onblur="myFunction3()">
+                <hr style="width: 350px; color:#f5f1ef"> <br>
+                <p id="error_pass2" style="font-size: 15px; font-style: italic; color: red;"></p>
+            </div>
+            <div class="form-group">
+                <label for="mk1"class="A">Xác nhận mật khẩu:<span class="txt-red">(*)</span><span class="txt-red" id="error_pass1"></span></label><br>
+                <input type="password" name="mk1" id="mk1" class="input-small"size="48px" onblur="myFunction4()">
+                <hr style="width: 350px; color:#f5f1ef"> <br>
+            </div>
+            <div class="form-group" style="padding-left: 150px;">
+                <input type="button" value="Đăng ký" style="width: 70px;">
+                <input type="reset" value="Hủy" style="width: 70px;">
+            </div>
+        </form>
+        </div>
+    </div>
+
+    <script>
+        function myFunction(){
+            var name = window.document.getElementById("ten").value;
+            var regex_name = /[^\w\s]|[\d]/;
+            
+            if (name == "" || name == null){
+                window.document.getElementById("error_name").innerHTML="Vui lòng không để trống";
+            }
+            // else if (!isNaN(name)){
+            //     window.document.getElementById("error_name").innerHTML="Định dạng không hợp lệ";
+            // }
+            else if(regex_name.test(name)){
+                   window.document.getElementById("error_name").innerHTML="Định dạng không hợp lệ";
+            }
+            else{
+                window.document.getElementById("error_name").innerHTML="";
+            }
+
+        }
+        function myFunction1(){
+            var sodt = window.document.getElementById("dt").value;
+            var regex_phone = /^\d{3}[-\s]?\d{3}[-\s]?\d{4}$/;
+            if (sodt.trim() === "" || sodt == null){
+                window.document.getElementById("error_phone").innerHTML="Vui lòng không để trống";
+            }
+            else if(!regex_phone.test(sodt)){
+                window.document.getElementById("error_phone").innerHTML="Định dạng không hợp lệ";
+            }
+            else{
+                window.document.getElementById("error_phone").innerHTML="";
+            }
+        }
+        function myFunction2(){
+            var taikhoan = window.document.getElementById("tk").value;
+            var regex_email = /\w+@gmail.com$/
+            if (taikhoan == "" || taikhoan == null){
+                window.document.getElementById("error_email").innerHTML="Vui lòng không để trống";
+            }
+            else if(!regex_email.test(taikhoan)){
+                window.document.getElementById("error_email").innerHTML="Định dạng không hợp lệ";
+            }
+            else{
+                window.document.getElementById("error_email").innerHTML="";
+            }
+        }
+        function myFunction3() {
+            var matkhau = window.document.getElementById("mk").value;
+            var regex_mk = /\s/;
+            var regex_mk1 = /^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$/;
+            if (matkhau == "" || matkhau == null) {
+                window.document.getElementById("error_pass").innerHTML = "Vui lòng không để trống";
+            } else if (regex_mk.test(matkhau)) {
+                window.document.getElementById("error_pass").innerHTML = "Mật khẩu không được chứa dấu cách";
+            } else if (!regex_mk1.test(matkhau)) {
+                window.document.getElementById("error_pass2").innerHTML ="Mật khẩu phải đáp ứng các yêu cầu sau:<br/>" +
+                                                                        "- Có ít nhất hai ký tự in hoa liên tiếp.<br/>" +
+                                                                        "- Có ít nhất một ký tự đặc biệt từ tập hợp [!@#$&*].<br/>" +
+                                                                        "- Có ít nhất hai chữ số liên tiếp.<br/>" +
+                                                                        "- Có ít nhất ba ký tự thường liên tiếp.<br/>" +
+                                                                        "- Có tổng cộng ít nhất tám ký tự.";
+            }
+            else{
+                window.document.getElementById("error_pass").innerHTML = "";
+                window.document.getElementById("error_pass2").innerHTML = "";
+                return matkhau;
+            }
+        }
+        function myFunction4(){
+            var matkhau1 = window.document.getElementById("mk1").value;
+            if (matkhau1 == "" || matkhau1 == null){
+                window.document.getElementById("error_pass1").innerHTML="Vui lòng không để trống";
+            }
+            else if (matkhau1!=myFunction3()){
+                window.document.getElementById("error_pass1").innerHTML="Mật khẩu không trùng khớp";
+            }
+            else{
+                return matkhau1;
+            }
+        }
+    </script>
+   
+    
+<br><br><br><br><br>
+<p>!isNaN(name)</p>
+</body>
+</html>

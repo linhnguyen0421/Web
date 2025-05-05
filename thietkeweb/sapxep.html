@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sắp xếp dãy số</title>
+</head>
+<style>
+    table{
+        border-collapse: collapse;
+    }
+</style>
+<body>
+    <form>
+        <table border="1">
+    <tr>
+        <td><label for="inputNumbers">Nhập dãy 5 chữ số:</label></td>
+        <td><input type="text" id="inputNumbers"></td>
+    </tr>
+    <tr>
+        <td>Dãy số đã sắp xếp:</td>
+        <td><input id="sortedNumbers" readonly></td> 
+        <!-- Điều này ngăn người dùng chỉnh sửa ô input thứ hai, vì nó chỉ dùng để hiển thị kết quả.-->
+    </tr> 
+    <tr>
+        <td colspan="2" align="center"><input type="button" onclick="sortNumbers()" value="sap xep">
+        <input type="reset" value="xoa"></td>
+    </tr>
+</table>
+</form>
+    
+
+    <script>
+        function sortNumbers() {
+            // Lấy giá trị từ ô nhập liệu
+            var input = document.getElementById('inputNumbers').value;
+
+            // Chuyển đổi chuỗi nhập vào thành mảng các số
+            var numbersArray = input.split(',').map(Number);
+
+            // Sắp xếp mảng
+            var sortedArray = numbersArray.sort((a, b) => a - b);
+
+            // Hiển thị kết quả đã sắp xếp
+            document.getElementById('sortedNumbers').value = sortedArray;
+        }
+    </script>
+</body>
+</html>
