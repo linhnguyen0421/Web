@@ -1,0 +1,119 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:Arial,"loto",sans-serif;
+    background-color:#efefef;
+}
+.container{
+    width:280px;
+    height:420px;
+    background: rgb(255,255,255);
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius:5px;
+    box-shadow:15px 10px 15px;
+}
+#user-men{
+    font-size:2.5rem;
+    margin: 10px 45%;
+    color: rgb(58,58,161);
+}
+.welcome-heading{
+    font-size: 1.1rem;
+    text-align: center;
+    text-transform:capitalize;
+    color:rgb(91,129,241);
+}
+.dkp-heading{
+    text-transform:uppercase;
+}
+.dtn-container{
+    margin:40px 20px;
+}
+.dtn-container i{
+    margin-right:80px;
+}
+.social-media-login{
+    text-decoration:none;
+    padding: 8px 15px;
+    background-color: #39569c;
+    color: #fff;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+.social-media-login1{
+    text-decoration: none;
+    padding:8px 15px;
+    background-color: #ec5574;
+    color: #fff;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+.underline-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 15px 42px;
+}
+.underline{
+    width:80px;
+    height: 2px;
+    background-color: rgb(161,161,161);
+}
+.or-heading{
+    text-align: center;
+    margin-top: -10px;
+    padding: 0px 10px;
+}
+.input-box{
+    width: 220px;
+    height: 30px;
+    margin:10px 30px;
+    border-radius: 40px;
+    outline:none;
+    border: none;
+    box-shadow:10px 10px 13px;
+    padding-left: 10px;
+}
+.input-box1{
+    width: 220px;
+    height: 30px;
+    margin: 10px 30px 30px;
+    border-radius:40px;
+    outline:none;
+    border:none;
+    padding-left: 10px;
+    box-shadow: 10px 10px 13px;
+}
+.login-btn{
+    margin: 30px;
+    padding: 8px 92px;
+    background-image: linear-gradient(to left,rgh(170,170,241),rgb(39,39,250));
+    border-radius: 40px;
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+.forget-password{
+    position: relative;
+    margin:20px 70px;
+    text-decoration:none;
+    font-weight: bold;
+}
+.register{
+    position:absolute;
+    margin-top: 40px;
+    font-size: 0.8rem;
+    padding: 10px 20px;
+}
+.Register-now{
+    text-decoration: none;
+    margin-left:10px ;
+    font-size:0.8rem;
+    font-weight: bold;
+}
