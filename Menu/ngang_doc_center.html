@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+<style>
+	*{ 
+		margin: 0; 
+		padding: 0;}
+	body{ 
+		font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif"; 
+		color:black;}
+	#menu ul{
+		list-style-type: none; 
+		background: blue; 
+		text-align: center;}
+	#menu ul li{ 
+		color: black; 
+		display: inline-table; 
+		width:175px;
+		line-height: 40px; 
+		position: relative;}
+	#menu ul li a{
+		color: #fff; 
+		text-decoration: none; 
+		display: block;}
+	#menu ul li a:hover{
+		background: #ff0; 
+		color: #333;}
+	#menu ul li > .menucon{
+		display: none; 
+		position: absolute;}
+	#menu ul li:hover .menucon{
+		display: block;}
+	
+	
+</style>
+<body>
+	<div id="menu">
+	<ul>
+		<li><a href="">Trang chủ</a></li>
+		<li><a href="">Sản Phẩm</a>
+		<ul class="menucon">
+			<li><a href="">Máy tính văn phòng</a></li>
+			<li><a href="">Máy chủ</a></li>
+			<li><a href="">Laptop</a></li>
+			<li><a href="">Màn hình máy tính</a></li>
+			<li><a href="">Máy in</a></li>
+		</ul>
+		</li>
+		<li><a href="">Tuyển dụng</a></li>
+		<li><a href="">Hỗ trợ khách hàng</a></li>
+		<li><a href="">Hệ thống cửa hàng</a></li>
+		</ul>
+	</div>
+</body>
+</html>
