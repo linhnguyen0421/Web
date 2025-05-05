@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* a[target]{
+        background: yellow;
+    } */
+    /* a[target="_blank"]{
+        background: yellow;
+    } */
+    /* a[title~="Website"]{
+        background-color: palegoldenrod;
+    } */
+
+</style>
+<body>
+    <a href="https://www.google.com" title="Website Google">Google</a>
+    <a href="https://www.facebook.com" title="Website Facebook" target="_blank">Facebook</a>
+    <a href="https://www.youtube.com" title="Website Youtube" target="">Youtube</a>
+
+
+
+    <br>
+    <br>
+    <style>
+        /* p[class|="top"]{
+            background: yellow;
+        } */
+        /* p[class^="top"]{
+            background: yellow;
+        } */
+        p[class$="top"]{
+            background: yellow;
+        }
+    </style>
+    <p class="top-header test">Noi dung 1</p>
+    <p class="top- header test">Noi dung 2</p>
+    <p class="topheader">Noi dung 3</p>
+    <p class="top">Noi dung 4</p>
+    <p class="top test">Noi dung 5</p>
+</body>
+</html>

@@ -1,0 +1,32 @@
+ @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); 
+/* .box-model{
+    padding: 50px;
+    border: 10px solid #000;
+    margin-bottom: 100px;
+}    */
+.box-1{
+    border: 5px solid #000;
+    padding-top: 20px;
+    padding-left: 50px;
+}
+
+.box-2{
+    border: 2px dashed red;
+    padding: 20px 50px;
+}
+
+.box-3{
+    background-color: rgb(129, 221, 129);
+    border:10px dashed #000;
+    padding: 50px;
+    background-clip:padding-box;
+
+}
+.box-4{
+    border:10px dashed #000;
+    padding: 50px;
+    background-size:cover ;/*che phu*/
+    background-repeat: no-repeat;
+    background-image: url(hinhnen.jpg);
+    background-origin:padding-box ;
+}

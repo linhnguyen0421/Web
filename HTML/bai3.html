@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+</head>
+<a>
+    <!--thẻ iframe được sử dụng để hiển thị 1 trang web trong 1 trang web-->
+    <iframe src="https://28tech.com.vn/lap-trinh-front-end" title="description" height="500" width="1000"></iframe>
+    <!--nhúng video youtobe-->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/a-jdOviGQ00?si=v-PNLT4EtXi4Clnv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!--nhúng bản đồ-->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125776.79555243875!2d105.50191889166545!3d9.890170543646049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0ed52d013e8f3%3A0x71e5eec57c047c97!2zdHQuIELhuqN5IE5nw6BuLCBDaMOidSBUaMOgbmggQSwgSOG6rXUgR2lhbmcsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1727020715731!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!--khi an vao chu coc coc se thay bing thanh coc coc-->
+    <iframe src="https://www.bing.com/" name="web_bing" width="1000" height="600"></iframe>
+    <a href="https://coccoc.com/search" target="web_bing">Coc Coc</a>
+    <!--neu khi click vaof coc coc de sang trang moi thi target="_blabk"-->
+
+
+    <h2>Khong co Semantic</h2>
+    <div class="header">
+        Header
+    </div>
+    <div class="sidebar">
+        Sidebar
+    </div>
+    <div class="content">
+        <div class="post">Post</div>
+        <div class="post">Post</div>
+        <div class="post">Post</div>
+    </div>
+    <div class="footer">
+        Footer
+    </div>
+
+
+
+    <h2>Co Semantic</h2>
+    <header class="header">
+        Header
+    </header>
+    <nav class="sidebar">
+        Sidebar
+    </nav>
+    <main class="content">
+        <article class="post">Post</article>
+        <article class="post">Post</article>
+        <article class="post">Post</article>
+    </main>
+    <footer class="footer">
+        Footer
+    </footer>
+
+
+    <!--the form-->
+    <form action="">
+        <label for="fullName">Ho ten:</label>
+        <br/>
+        <input type="text" id="fullName" name="full_name">
+        <br />
+        <label for="email">Email:</label>
+        <br />
+        <input type="text" id="email" name="email" />
+        <br/><br/>
+        <input type="submit" value="Gui"/>
+    </form>
+    <form action="https:www.w3schools.com/action_page.php" target="_blank" method="GET" autocomplete="off" novalidate>
+
+        <label for="FullName">Ho Ten:</label>
+        <input id="FullName" name="ho_ten" type="text">
+        <input type="submit" value="gui">
+        <label for="">Mau sac</label>
+        <select name="color" size="3" multiple>
+            <option value="yellow">Mau Vang</option>
+            <option selected>Mau Xanh</option>
+            <option >Mau Do</option>
+        </select>
+</form>
+<br>
+
+    <form>
+        <textarea name="note" rows="5" cols="20"></textarea>
+        
+    </form>
+ <!--kiểu checkbox-->
+    <form action="https:www.w3schools.com/action_page.php" target="_blank">
+        <p>Nhung ngon ngu lap trinh ban da duoc hoc</p>
+        <input type="checkbox" id="ngonnguC" name="language" value="c">
+        <label for="ngonnguC">Ngon ngu C</label><br>
+        <input type="checkbox" id="ngonnguJava" name="language" value="java">
+        <label for="ngonnguJava">Ngon ngu Java</label><br>
+        <input type="checkbox" id="ngonnguPhp" name="language" value="php">
+        <label for="ngonnguPhp">Ngon ngu Php</label><br>
+    </form>
+
+    <form action="https:www.w3schools.com/action_page.php" target="_blank">
+        <p>Nhung ngon ngu ban thich nhat</p>
+        <input type="radio" id="ngonnguC" name="language" value="c">
+        <label for="ngonnguC">Ngon ngu C</label><br>
+        <input type="radio" id="ngonnguJava" name="language" value="java">
+        <label for="ngonnguJava">Ngon ngu Java</label><br>
+        <input type="radio" id="ngonnguPhp" name="language" value="php">
+        <label for="ngonnguPhp">Ngon ngu Php</label><br>
+        <p>thanh keo</p>
+        <input type="range" name="volume" min="0" max="100" step="20"><br>
+        <input type="color" name="color" >
+        <br>
+        <!-- chi cho nhap max 9 -->
+        <input type="number" name="soluong" min="1" max="9">
+    </form>
+
+<br>
+    <form action="https:www.w3schools.com/action_page.php" target="_blank">
+        <input type="text" name="hoten" value="Nguyen Thi Hoai Linh">
+        <button>Gửi</button>
+        <br><br>
+        <input type="text" name="cccd" value="012345689" readonly>
+        <button>Gửi</button><br><br>
+        <input type="text" name="hoten" maxlength="10">
+    </form>
+</body>
+</html>
